@@ -1,0 +1,17 @@
+<div ng-include="'partials/default/navbar'"></div>
+
+<div class="jumbotron">
+  <h1>It works!</h1>
+  <p><a class="btn btn-lg btn-success" ng-href="#">Amazing!</a></p>
+</div>
+
+<div class="row marketing">
+  <div ng-repeat="thing in technologies">
+      <h4>{{thing.name}}</h4>
+      <p>{{thing.info}}</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Powered by <a href="https://twitter.com/luixaviles">@luixaviles</a></p>
+</div>

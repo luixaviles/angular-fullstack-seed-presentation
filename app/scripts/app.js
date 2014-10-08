@@ -9,8 +9,8 @@ angular.module('myApp', [
   .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'partials/main',
-        controller: 'MainCtrl'
+        templateUrl: 'partials/default/main',
+        controller: 'DefaultController'
       })
       .otherwise({
         redirectTo: '/'

@@ -29,15 +29,18 @@ module.exports = function(config) {
         'app/bower_components/angular-sanitize/angular-sanitize.js',
         'app/bower_components/angular-route/angular-route.js',
         'app/bower_components/angular-mocks/angular-mocks.js',
-        'app/bower_components/angular-scenario/angular-scenario.js',
         // endbower
+        'app/scripts/**/*.js',
+        'test/client/spec/**/*.js'
     ],
 
     // list of files / patterns to exclude
-    exclude: [],
+    exclude: [
+        'app/bower_components/angular-scenario/angular-scenario.js'
+    ],
 
     // web server port
-    port: 8080,
+    port: 8090,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -48,24 +51,24 @@ module.exports = function(config) {
     // - PhantomJS
     // - IE (only Windows)
     browsers: [
-      'PhantomJS'
+      'Chrome'
     ],
 
     // Which plugins to enable
-    plugins: [
-      'karma-phantomjs-launcher',
-      'karma-jasmine'
-    ],
+//    plugins: [
+//      'karma-phantomjs-launcher',
+//      'karma-jasmine'
+//    ],
 
     // Continuous Integration mode
     // if true, it capture browsers, run tests and exit
     singleRun: false,
 
-    colors: true,
+//    colors: true,
 
     // level of logging
     // possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-    logLevel: config.LOG_INFO,
+    logLevel: config.LOG_DEBUG
 
     // Uncomment the following lines if you are using grunt's server to run the tests
     // proxies: {

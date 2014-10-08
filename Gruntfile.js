@@ -206,7 +206,7 @@ module.exports = function (grunt) {
             },
             test: {
                 devDependencies: true,
-                src: 'test/karma.conf.js',
+                src: 'karma.conf.js',
                 ignorePath: /\.\.\//,
                 fileTypes: {
                     js: {
@@ -457,7 +457,7 @@ module.exports = function (grunt) {
         // Test settings
         karma: {
             unit: {
-                configFile: 'test/karma.conf.js',
+                configFile: 'karma.conf.js',
                 singleRun: true
             }
         },
@@ -565,7 +565,7 @@ module.exports = function (grunt) {
         }
 
         else grunt.task.run([
-                'test:server',
+//                'test:server',
                 'test:client'
             ]);
     });
