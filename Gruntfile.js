@@ -475,6 +475,22 @@ module.exports = function (grunt) {
             }
         },
 
+        protractor: {
+            options: {
+                keepAlive: true,
+                configFile: 'protractor.conf.js',
+                debug: false,
+                args: {
+                    params: {
+                        protocol: '<%= protocol %>',
+                        host: '<%= host %>',
+                        port: '<%= port %>'
+                    }
+                }
+            },
+            run: {}
+        },
+
         exec: {
             update_webdriver: 'npm run update-webdriver'
         }
