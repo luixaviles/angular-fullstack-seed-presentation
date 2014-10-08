@@ -193,12 +193,28 @@ module.exports = function (grunt) {
     },
 
     // Automatically inject Bower components into the app
-    'bower-install': {
-      app: {
-        html: '<%= yeoman.app %>/views/index.html',
-        ignorePath: '<%= yeoman.app %>/'
-      }
-    },
+      'wiredep': {
+          app: {
+              src: '<%= yeoman.app %>/views/index.html',
+              ignorePath: '../'
+          },
+          test: {
+              devDependencies: true,
+              src: 'test/karma.conf.js',
+              ignorePath:  /\.\.\//,
+              fileTypes: {
+                  js: {
+                      block: /(([\s\t]*)\/\/\s*bower:*(\S*))(\n|\r|.)*?(\/\/\s*endbower)/gi,
+                      detect: {
+                          js: /'(.*\.js)'/gi
+                      },
+                      replace: {
+                          js: '\'{{filePath}}\','
+                      }
+                  }
+              }
+          }
+      },
 
     // Renames files for browser caching purposes
     rev: {
@@ -396,7 +412,7 @@ module.exports = function (grunt) {
     // Test settings
     karma: {
       unit: {
-        configFile: 'karma.conf.js',
+        configFile: 'test/karma.conf.js',
         singleRun: true
       }
     },
@@ -439,7 +455,7 @@ module.exports = function (grunt) {
     if (target === 'debug') {
       return grunt.task.run([
         'clean:server',
-        'bower-install',
+        'wiredep',
         'concurrent:server',
         'autoprefixer',
         'concurrent:debug'
@@ -448,7 +464,7 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      'bower-install',
+      'wiredep',
       'concurrent:server',
       'autoprefixer',
       'express:dev',
@@ -487,7 +503,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'bower-install',
+    'wiredep',
     'useminPrepare',
     'concurrent:dist',
     'autoprefixer',
