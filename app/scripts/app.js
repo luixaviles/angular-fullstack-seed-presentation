@@ -5,7 +5,8 @@ var app = angular.module('myApp', [
     'ngResource',
     'ngSanitize',
     'ui.router',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ngGrid'
 ]);
 app.config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
@@ -16,6 +17,10 @@ app.config(['$stateProvider', '$urlRouterProvider',
             .state('home', {
                 url: "/home",
                 templateUrl: 'partials/main.html'
+            })
+            .state('developer', {
+                url: "/developers",
+                templateUrl: 'partials/developer.html'
             })
         ;
     }
