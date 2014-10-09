@@ -14,7 +14,7 @@ exports.config = {
     // --suite=smoke,full only the patterns matched by the specified suites will
     // run.
     suites: {
-        'default-all': 'test/e2e/**/*_spec.js'
+        'default-all': 'test/e2e/default/**/*.spec.js'
     },
 
     multiCapabilities: [
