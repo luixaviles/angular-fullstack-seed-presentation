@@ -4,13 +4,13 @@ var app = angular.module('myApp');
 app.controller('DeveloperController', ['$scope', '$http',
     function ($scope, $http) {
         $http({method: 'GET', url: 'api/developers'}).success(function(data){
-            $scope.students = data;
+            $scope.developers = data;
         });
 
         $scope.comments = "Great developers.";
 
         $scope.gridOptions = {
-            data: 'students',
+            data: 'developers',
             enableColumnResize: true,
             enableColumnReordering: true,
             multiSelect: false,

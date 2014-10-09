@@ -12,17 +12,20 @@ describe('Controller: DeveloperCtrl', function () {
   // Initialize the controller and a mock scope
   beforeEach(inject(function (_$httpBackend_, $controller, $rootScope) {
     $httpBackend = _$httpBackend_;
-    $httpBackend.expectGET('/api/awesomeThings')
-      .respond(['HTML5 Boilerplate', 'AngularJS', 'Karma', 'Express']);
+    $httpBackend.expectGET('api/developers')
+      .respond([
+            {ci: 1, name: 'Roberto', language: 'Java'},
+            {ci: 2, name: 'Juan', language: 'PHP'}
+        ]);
     scope = $rootScope.$new();
-    DeveloperCtrl = $controller('DeveloperCtrl', {
+    DeveloperCtrl = $controller('DeveloperController', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings).toBeUndefined();
+  it('should attach a list of developers to the scope', function () {
+    expect(scope.developers).toBeUndefined();
     $httpBackend.flush();
-    expect(scope.awesomeThings.length).toBe(4);
+    expect(scope.developers.length).toBe(2);
   });
 });
