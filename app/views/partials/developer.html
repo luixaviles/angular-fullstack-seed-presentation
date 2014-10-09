@@ -4,11 +4,12 @@
         <div ng-grid="gridOptions"></div>
         <div class="form-group">
             <label for="comments">Comments:</label>
-            <textarea class="form-control" maxlength="255" ng-maxlength="255" id="comments">
+            <textarea class="form-control" maxlength="255" ng-maxlength="255" id="comments" ng-model="comments">
             </textarea>
+            <label id="data-sent">{{dataSentMessage}}</label>
         </div>
         <div class="form-group text-right submit-group ">
-            <button id="submit" type="submit" class="btn btn-default">Submit</button>
+            <button id="submit" type="submit" class="btn btn-default" ng-click="submit()" ng-disabled="comments == ''" >Submit</button>
         </div>
     </form>
 </div>

@@ -9,6 +9,8 @@ app.controller('DeveloperController', ['$scope',
             {ci: 3, name: 'Maria', age: 20}
         ];
 
+        $scope.comments = "Great developers.";
+
         $scope.gridOptions = {
             data: 'students',
             enableColumnResize: true,
@@ -20,5 +22,10 @@ app.controller('DeveloperController', ['$scope',
             enableCellEditOnFocus: true,
             enableRowSelection: false
         };
+
+        $scope.submit = function(){
+            alert('Are you ready to submit?');
+            $scope.dataSentMessage = 'Sucess';
+        }
     }
 ]);
