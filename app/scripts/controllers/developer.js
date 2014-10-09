@@ -1,13 +1,11 @@
 'use strict';
 
 var app = angular.module('myApp');
-app.controller('DeveloperController', ['$scope',
-    function ($scope) {
-        $scope.students = [
-            {ci: 1, name: 'Roberto', age: 18},
-            {ci: 2, name: 'Juan', age: 19},
-            {ci: 3, name: 'Maria', age: 20}
-        ];
+app.controller('DeveloperController', ['$scope', '$http',
+    function ($scope, $http) {
+        $http({method: 'GET', url: 'api/developers'}).success(function(data){
+            $scope.students = data;
+        });
 
         $scope.comments = "Great developers.";
 
