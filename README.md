@@ -12,6 +12,11 @@ angular-fullstack-seed-presentation
 You need to have installed NodeJS and Git in your machine before to start.
 Use `Git bash` to run all commands if you are on Windows platform.
 
+## Presentation
+
+If you want to learn more about used technologies in the project, you can see a presentation [here](https://github.com/luixaviles/angular-fullstack-seed-presentation/tree/master/presentation).
+Just follow the instructions to run the presentation. Please feel free to contact me if you have any question.
+
 ## Usage
 
 Clone the basic project and `cd` into it:
@@ -63,7 +68,7 @@ To add new services, just type:
 yo angular-fullstack:service user-service
 ```
 
-To se more generators see main documentation page of [generator-angular-fullstack@1.4.2](https://github.com/DaftMonk/generator-angular-fullstack/tree/v1.4.2)
+To see more generators available you can visit main documentation page of [generator-angular-fullstack@1.4.2](https://github.com/DaftMonk/generator-angular-fullstack/tree/v1.4.2)
 
 ## License
 
