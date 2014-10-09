@@ -22,8 +22,8 @@ app.controller('DeveloperController', ['$scope', '$http',
         };
 
         $scope.submit = function(){
-            alert('Are you ready to submit?');
-            $scope.dataSentMessage = 'Sucess';
+//            alert('Are you ready to submit?');
+            $scope.dataSentMessage = 'Success';
         }
     }
 ]);
