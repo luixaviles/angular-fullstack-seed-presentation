@@ -10,8 +10,7 @@ app.controller('DeveloperController', ['$scope',
         ];
 
         $scope.gridOptions = {
-            data: 'students',
-            rowHeight: 40,
+            data: 'students'
         };
     }
 ]);
