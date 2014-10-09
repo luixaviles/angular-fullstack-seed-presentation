@@ -10,7 +10,15 @@ app.controller('DeveloperController', ['$scope',
         ];
 
         $scope.gridOptions = {
-            data: 'students'
+            data: 'students',
+            enableColumnResize: true,
+            enableColumnReordering: true,
+            multiSelect: false,
+            width: 'auto',
+            rowHeight: 40,
+            enableCellSelection: true,
+            enableCellEditOnFocus: true,
+            enableRowSelection: false
         };
     }
 ]);

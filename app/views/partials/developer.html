@@ -2,5 +2,13 @@
     A list of developers: <br>
     <form name="developersForm">
         <div ng-grid="gridOptions"></div>
+        <div class="form-group">
+            <label for="comments">Comments:</label>
+            <textarea class="form-control" maxlength="255" ng-maxlength="255" id="comments">
+            </textarea>
+        </div>
+        <div class="form-group text-right submit-group ">
+            <button id="submit" type="submit" class="btn btn-default">Submit</button>
+        </div>
     </form>
 </div>
