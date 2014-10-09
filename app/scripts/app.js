@@ -17,10 +17,6 @@ app.config(['$stateProvider', '$urlRouterProvider',
                 url: "/home",
                 templateUrl: 'partials/main.html'
             })
-            .state('student', {
-                url: "/student",
-                templateUrl: 'partials/student.html'
-            })
         ;
     }
 ]);
