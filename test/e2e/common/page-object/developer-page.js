@@ -1,7 +1,7 @@
 /**
  * Created by luis.aviles on 10/9/2014.
  */
-var DefaultPage = function () {
+var DeveloperPage = function () {
     this.ageColumn = element.all(by.css('.col2 .colt2'));
     this.fieldComments = element(by.id('comments'));
     this.buttonSubmit = element(by.id('submit'));
@@ -12,4 +12,4 @@ var DefaultPage = function () {
     };
 }
 
-module.exports.DefaultPage = DefaultPage;
+module.exports.DeveloperPage = DeveloperPage;
