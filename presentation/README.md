@@ -6,4 +6,4 @@
 	$ npm install
 	$ npm start
 
-By default slideshow would be served at port 8000. You can customize it and few other settings by providing `env.json` configuration file in main folder.
+Open your favorite browser in [http://localhost:8000](http://localhost:8000). Feel free to contact me if you have any question!
